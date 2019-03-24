@@ -19,10 +19,10 @@ class Triangle
       @legal = false
     elsif sides_array.any? {|side| side < 0}
       @legal = false
-    elsif self.tri_equality? == false
-      @legal = false
     elsif sides_array.any? {|side| side.is_a?(Float)}
       @legal = true
+    elsif self.tri_equality? == false
+      @legal = false
     else
       @legal = true
     end
